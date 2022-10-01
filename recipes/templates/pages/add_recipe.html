@@ -1,0 +1,23 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %} Add Recipe | Kichex {% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{% static 'css/add_recipe.css' %}">
+{% endblock %}
+
+
+{% block content %}
+
+    {% include 'partials/_nav.html' %}
+    <div class="help_view" id="view">
+        <div class="all">
+            {% if not is_finish_action %}
+                {% include 'includes/add_recipe_start.html' %}
+            {% else %}
+            {% include 'includes/add_recipe_finish.html' %}
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

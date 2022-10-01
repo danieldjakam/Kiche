@@ -1,0 +1,164 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Recipe with old paper</title>
+    </head>
+    {% load static %}
+    <body>
+        <style>
+            *{
+        padding: 0;
+        margin: 0;
+        font-family: Poppins;
+    }
+    .page{
+        width: 100%;
+        margin-left: 25%;
+        background: url("http://localhost:8000{% static 'images/recettes/rs.png' %}") no-repeat center/cover;
+    }
+    .blur{
+        background: rgba(255, 255, 255, .3);
+        backdrop-filter: blur(7px);
+    }
+    .head{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+    .head > h1{
+        font-size: 2rem;
+    }
+    .head table{
+        font-size: 1.39rem;
+        border-collapse: collapse;
+    }
+    .head table tr td{
+        text-align: center;
+        padding: 10px;
+        border: 1px solid rgba(0, 0, 0, 0.5);
+    }
+
+    .otherHead{
+        display: flex; 
+        padding: 20px;
+        position: relative;
+    }
+
+    .otherHead > .ingredients{
+        background: url("http://localhost:8000{% static 'images/recettes/rs.png' %}");
+        box-shadow: 10px 3px 30px rgba(0, 0, 0, 0.8);
+        width: 250px;
+        position: absolute;
+        right: 49%;
+        transform: rotate(-5deg);
+    }
+    .ingredients > .blur{
+        padding: 10px;
+        background: rgba(255, 255, 255, .2);
+    }
+    .otherHead > .ingredients > .blur > h3{
+        font-size: 1.3rem;
+    }
+    .ingredients > .blur > ul{
+        list-style: none;
+        line-height: 25px;
+        padding: 10px 20px;
+    }
+
+    .ingredients > .blur > ul > li{
+        font-size: 1.2rem;
+    }
+
+    .otherHead > .img{
+        position: absolute;
+        left: 50%;
+        height: 270px;
+        background: url('images/ingredients.jpg');
+        width: 270px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: rotate(6deg);
+        box-shadow: 10px 3px 30px rgba(0, 0, 0, 0.8);
+        z-index: 100;
+    }
+    .img > img{
+        height: 250px;
+        width: 250px;
+    }
+    .body{
+        margin-top: 350px;
+        padding: 10px 20px;
+        line-height: 27px;
+        font-size: 1.2rem;
+    }
+    .page > .info
+    {
+        display: flex;
+        justify-content: center;
+        font-size: 1.3rem;
+    }
+        </style>
+        <div class="page">
+            <div class="blur">
+                
+            <div class="head">
+                <h1 class="title" style="background-color: red;">
+                    Riz saute facon camerounaise
+                </h1>
+                <table class="info">
+                    <tbody>
+                        <tr>
+                            <td>
+                                8 personnes
+                            </td>
+                            <td>
+                                Preparation: 2h30mn
+                            </td>
+                            <td>
+                                Cuisson: 30mn
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="otherHead">
+                <div class="ingredients">
+                    <div class="blur">
+                        <h3>Liste des ingredients</h3>
+                        <ul>
+                            <li>20 boites de riz</li>
+                            <li>10 cubes</li>
+                            <li>Lorem ipsum dolor.</li>
+                            <li>Lorem ipsum dolor.</li>
+                            <li>Lorem ipsum dolor.</li>
+                            <li>Lorem ipsum dolor.</li>
+                            <li>Lorem ipsum dolor.</li>
+                            <li>Lorem ipsum dolor.</li>
+                            <li>Lorem ipsum dolor.</li>
+                            <li>Lorem ipsum dolor.</li>
+                            <li>Lorem ipsum dolor.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="img">
+                    <img src="http://localhost:8000{% static 'images/recettes/rs.png' %}" alt="Riz saute">
+                </div>
+            </div>
+
+            <div class="body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ad alias, doloribus sunt rem repellendus illum mollitia repellat impedit placeat optio consequatur provident, corporis nisi! <br>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore tempora cum rerum at sint vero officiis quasi.
+            </div>
+            </div>
+            <div class="info">
+                Made with &copy; Kiche 2022
+            </div>
+        </div>
+
+    </body>
+    </html>

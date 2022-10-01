@@ -1,0 +1,192 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+}
+.global{
+    width: 100%;
+    display: flex;
+}
+
+.global > .leftPart{
+    width: 50%;
+    position: relative;
+}
+.global > .leftPart > img{
+    width: 100%;
+    height: 105vh;
+}
+.global > .leftPart > .info{
+    position: absolute;
+    bottom: 80px;
+    left: 80px;
+    width: 50%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #fff;
+    font-weight: 900;
+}
+
+.global > .rigthPart{
+    width: 50%;
+    max-height: 100vh;
+    overflow-y: scroll;
+}
+
+.global > .rigthPart > .form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+    width: 50%;
+    margin-left: 25%;
+}
+
+.global > .rigthPart > .form > form > h1{
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.rigthPart > .form > form > ul.errorlist{
+    list-style-type: none;
+    color: red;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+.rigthPart > .form > form > p {
+    margin-bottom: 20px;
+}
+.rigthPart > .form > form > p > label{
+    color: rgba(0, 0, 0, 0.75);
+    font-size: 1.3rem;
+    width: 100%;
+    margin-bottom: 2px;
+    float: left;
+    text-align: left;
+}
+
+.rigthPart > .form > form > p > input{
+    border: none;
+    width: 100%;
+    border-bottom: 3px solid #bbcfe2;
+    background: none;
+    font-size: 1.7rem;
+    outline: none;
+}
+
+.rigthPart > .form > form > button{
+    padding: 10px 60px;
+    border-radius: 39px;
+    border: none;
+    background: #41A3FA;
+    color: #fff;
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+.rigthPart > .form > form > button:hover{
+    background: linear-gradient(to right,#120c75, #104268);
+}
+
+.rigthPart > .form > p.question{
+    width: 100%;
+    font-size: 1rem;
+    margin-top: 10px;
+    text-align: right;
+}
+
+.rigthPart > .form > p.question > a{
+    text-decoration: none;
+    color: #6eb5ed;
+}
+
+.rigthPart > .form > p.question > a:hover{
+    text-decoration: none;
+    color: #292398;
+}
+
+.rigthPart > .form > form > input:focus{
+    border: none;
+    outline: none;
+    width: 100%;
+    border-bottom: 3px solid #bbcfe2;
+    background: none;
+    margin-bottom: 30px;
+}
+
+.rigthPart > .form > .question{
+    text-align: right;
+}
+
+.global > .rigthPart > .form > form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.top{
+    position: absolute;
+    top: 20px;
+    right: 50px;
+}
+
+.logo{
+    width: 50px;
+    height: 50px;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    text-decoration: none;
+}
+.logo:hover{
+    background: #41A3FA;
+}
+.logo > i{
+    color: #fff;
+    font-size: 1.39rem;
+}
+
+/* Dark mode */
+
+.dark_mode{
+    background: #161b22;
+    color: #fff;
+}
+
+.dark_mode .logo{
+    background: #fff;
+}
+
+.dark_mode .logo:hover{
+    background: #41A3FA;
+}
+
+.dark_mode .logo > i{
+    color: #000;
+}
+
+.dark_mode .rigthPart  > .form > form > p > label {
+    color: #fff;
+}
+.dark_mode input{
+    color: #41A3FA;
+}
+
+
+/* Responsive */
+
+@media screen and (max-width: 635px) {
+    .global > .leftPart {
+        display: none;
+    }
+    .global > .rigthPart{
+        width: 100%;
+    }
+}

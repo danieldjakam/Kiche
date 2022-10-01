@@ -1,0 +1,21 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %} Infos {% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+
+{% block content %}
+
+    {% include 'partials/_nav.html' %}
+    <div class="favorites_recipes_view" id="view">
+        <h1>{{ recipe.name }}</h1>
+    </div>
+{% endblock %}
+
+{% block js %}
+
+{% endblock %}

@@ -1,0 +1,151 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% load i18n %}
+
+
+{% block title %} Kiche | Make easily recipes {% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{% static 'css/settings.css' %}">
+{% endblock %}
+
+
+{% block content %}
+    {% include 'partials/_nav.html' %}
+    <div class="settings_view" id="view">
+        <h1>{% translate 'settings' %}</h1>
+        <div class="theme setting">
+            <h2 class="title">
+                {% translate 'theme preference' %}
+            </h2>    
+            <hr>
+            <p>
+                <!--  -->
+                {% translate 'theme paragraphe' %}
+            </p>    
+
+            <div class="choices">
+                <div class="choices">
+                    <div class="choice ligth" id="theme_choice" data-theme="ligth">
+                        <div class="exemple">
+                            <div class="header">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="body">
+                                <div class="first_line">
+                                    <div></div>
+                                    <div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                                <div class="second_line">
+                                    <div class="big">
+                                        <div class="head"></div>
+                                    </div>
+                                    <div class="small">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="name">
+                            <input type="radio" id="theme_checker" data-theme="ligth" name="theme">
+                            {% translate 'ligth'%}
+                        </div>
+                    </div>
+                    <div class="choice dark" id="theme_choice" data-theme="dark"> 
+                        <div class="exemple">
+                            <div class="header">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="body">
+                                <div class="first_line">
+                                    <div></div>
+                                    <div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                                <div class="second_line">
+                                    <div class="big">
+                                        <div class="head"></div>
+                                    </div>
+                                    <div class="small">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="name">
+                            <input type="radio" data-theme="dark" id="theme_checker" name="theme">
+                            {% translate 'dark' %}
+                        </div>
+                    </div>
+                    <div class="choice ligth sync" id="theme_choice" data-theme="sync">
+                        <div class="exemple">
+                            <div class="header">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="body">
+                                <div class="first_line">
+                                    <div></div>
+                                    <div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                                <div class="second_line">
+                                    <div class="big">
+                                        <div class="head"></div>
+                                    </div>
+                                    <div class="small">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="name">
+                            <input type="radio" id="theme_checker" data-theme="sync" name="theme">
+                            {% translate 'automatique' %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="language setting">
+            <h2 class="title">
+                {% translate 'langue preference' %}
+            </h2>    
+            <hr>
+            <p>
+                {% translate 'lang paragraphe' %}
+            </p>    
+            {% get_current_language as lang %}
+            {% get_available_languages as langs %}
+            {% get_language_info_list for langs as languages %}
+    
+            
+            <div class="choices">
+                {% for l in languages|dictsort:'code' %}
+                    <a href="/{{l.code}}/accounts/settings" class="choice {% if l.code == lang %} checked {% endif %}" id="lang_choice" data-language="{{l.code}}">
+                        <div class="example">
+                            <img src="{% static 'images/flag/'|add:l.code|add:'.png' %}" alt="">
+                        </div>
+                        <div class="name">
+                            {% translate l.code %}
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

@@ -1,0 +1,472 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2034-06-23 13:19+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\accounts\forms.py:9
+msgid "username"
+msgstr "Username"
+
+#: .\accounts\forms.py:12
+msgid "email"
+msgstr "Email"
+
+#: .\accounts\forms.py:13
+msgid "password"
+msgstr "Password"
+
+#: .\accounts\forms.py:15
+msgid "confirm a password"
+msgstr "Confirm a password"
+
+#: .\accounts\forms.py:23
+msgid "prenom"
+msgstr "Subname"
+
+#: .\accounts\forms.py:26
+msgid "nom de famille"
+msgstr "Name"
+
+#: .\accounts\forms.py:29
+msgid "bio"
+msgstr "Biography"
+
+#: .\accounts\forms.py:32
+msgid "web site"
+msgstr "Web site"
+
+#: .\accounts\forms.py:35
+msgid "company"
+msgstr "Company"
+
+#: .\accounts\forms.py:38
+msgid "avatar"
+msgstr "Avatar"
+
+#: .\accounts\forms.py:43
+msgid "is a professional account"
+msgstr "Professional account ? "
+
+#: .\accounts\templates\auth_pages\login.html:24
+#: .\accounts\templates\auth_pages\login.html:28
+#: .\accounts\templates\auth_pages\register.html:39
+#: .\templates\pages\landing.html:18 .\templates\pages\landing.html:32
+msgid "login"
+msgstr "Login"
+
+#: .\accounts\templates\auth_pages\login.html:32
+msgid "login_ques"
+msgstr "Not have a account ?"
+
+#: .\accounts\templates\auth_pages\login.html:32
+#: .\accounts\templates\auth_pages\register.html:31
+#: .\accounts\templates\auth_pages\register.html:35
+#: .\templates\pages\landing.html:19
+msgid "register"
+msgstr "Register"
+
+#: .\accounts\templates\auth_pages\login.html:39
+#: .\accounts\templates\auth_pages\register.html:17
+msgid "need"
+msgstr ""
+"Need a server who keeps my recipes and gives them to me when i want, Kiche "
+"ensures."
+
+#: .\accounts\templates\auth_pages\register.html:39
+msgid "al"
+msgstr "Already have a account ?"
+
+#: .\accounts\templates\pages\profile\index.html:18
+msgid "overview"
+msgstr "Overview"
+
+#: .\accounts\templates\pages\profile\index.html:22
+msgid "hj"
+msgstr "Recipes"
+
+#: .\accounts\templates\pages\profile\index.html:43
+msgid "po"
+msgstr "Edit your profile"
+
+#: .\accounts\templates\pages\profile\index.html:48
+msgid "fp"
+msgstr "follower"
+
+#: .\accounts\templates\pages\profile\index.html:52
+msgid "fs"
+msgstr "following"
+
+#: .\accounts\templates\pages\profile\index.html:62
+msgid "cancel"
+msgstr "Cancel"
+
+#: .\accounts\templates\pages\profile\index.html:64
+msgid "save"
+msgstr "Save"
+
+#: .\accounts\templates\pages\profile\index.html:72
+msgid "ll"
+msgstr "Your popular recipes"
+
+#: .\accounts\templates\pages\profile\index.html:83
+#: .\accounts\templates\pages\profile\index.html:115
+#: .\recipes\templates\includes\add_recipe_start.html:84
+msgid "private"
+msgstr "private"
+
+#: .\accounts\templates\pages\profile\index.html:85
+#: .\accounts\templates\pages\profile\index.html:117
+#: .\recipes\templates\includes\add_recipe_start.html:75
+msgid "public"
+msgstr "public"
+
+#: .\accounts\templates\pages\profile\index.html:90
+msgid "created"
+msgstr "Created"
+
+#: .\accounts\templates\pages\profile\index.html:96
+#: .\accounts\templates\pages\profile\index.html:135
+msgid "have_not_create_recipe"
+msgstr "You have not created a recipe."
+
+#: .\accounts\templates\pages\profile\index.html:104
+#: .\templates\pages\home.html:17 .\templates\partials\_nav.html:69
+msgid "your_recipe"
+msgstr "Your recipes"
+
+#: .\accounts\templates\pages\profile\index.html:129
+msgid "updated"
+msgstr "updated"
+
+#: .\accounts\templates\pages\settings.html:15
+#: .\templates\partials\_nav.html:89
+msgid "settings"
+msgstr "Settings"
+
+#: .\accounts\templates\pages\settings.html:18
+msgid "theme preference"
+msgstr "Theme preference"
+
+#: .\accounts\templates\pages\settings.html:23
+msgid "theme paragraphe"
+msgstr ""
+"Choose how Kiche looks to you. Select between ligth, dark and automatique "
+"theme."
+
+#: .\accounts\templates\pages\settings.html:55
+msgid "ligth"
+msgstr "Ligth"
+
+#: .\accounts\templates\pages\settings.html:85
+msgid "dark"
+msgstr "Dark"
+
+#: .\accounts\templates\pages\settings.html:115
+msgid "automatique"
+msgstr "Automatique"
+
+#: .\accounts\templates\pages\settings.html:125
+msgid "langue preference"
+msgstr "Language preference"
+
+#: .\accounts\templates\pages\settings.html:129
+msgid "lang paragraphe"
+msgstr ""
+"Choose how Kiche talk to you. Select between Deutsch, English, French and "
+"Spain."
+
+#: .\cake\settings.py:166
+msgid "english_lang"
+msgstr ""
+
+#: .\cake\settings.py:167
+msgid "french_lang"
+msgstr ""
+
+#: .\cake\settings.py:168
+msgid "espagnol_lang"
+msgstr ""
+
+#: .\cake\settings.py:169
+msgid "deutsch_lang"
+msgstr ""
+
+#: .\cake\urls.py:27
+msgid "noadhack/"
+msgstr ""
+
+#: .\cake\urls.py:36
+msgid "accounts/"
+msgstr ""
+
+#: .\cake\urls.py:37
+msgid "notifications/"
+msgstr ""
+
+#: .\cake\urls.py:38
+#, fuzzy
+#| msgid "fav_recipes"
+msgid "recipes/"
+msgstr "Favorites recipes"
+
+#: .\recipes\templates\includes\add_recipe_finish.html:6
+msgid "finish the creation of "
+msgstr "Finish the creation of the recette called "
+
+#: .\recipes\templates\includes\add_recipe_finish.html:9
+msgid "you should finish the creation of the recipe."
+msgstr "You should finish the creation of the recipe. If no the recipe will be delete in the 7 next days."
+
+#: .\recipes\templates\includes\add_recipe_finish.html:19
+msgid "ingredients"
+msgstr "Ingredients"
+
+#: .\recipes\templates\includes\add_recipe_finish.html:21
+msgid "exple of ingredients list"
+msgstr ""
+
+#: .\recipes\templates\includes\add_recipe_finish.html:23
+msgid "indication for ingredients liste"
+msgstr ""
+
+#: .\recipes\templates\includes\add_recipe_finish.html:30
+msgid "preparation step"
+msgstr "Step of the preparation"
+
+#: .\recipes\templates\includes\add_recipe_finish.html:32
+#, fuzzy
+#| msgid "specify the time of preparation"
+msgid "exple of preparation step"
+msgstr "Specify the time of preparation (in minutes) :"
+
+#: .\recipes\templates\includes\add_recipe_finish.html:34
+msgid "indication for preparation step"
+msgstr ""
+
+#: .\recipes\templates\includes\add_recipe_finish.html:41
+msgid "cuisson step"
+msgstr "Step of the cuisson"
+
+#: .\recipes\templates\includes\add_recipe_finish.html:41
+#: .\recipes\templates\includes\add_recipe_start.html:25
+#: .\recipes\templates\includes\add_recipe_start.html:54
+msgid "optional"
+msgstr "optional"
+
+#: .\recipes\templates\includes\add_recipe_finish.html:43
+msgid "exple of cuisson step"
+msgstr ""
+
+#: .\recipes\templates\includes\add_recipe_finish.html:45
+msgid "indication for cuisson step"
+msgstr ""
+
+#: .\recipes\templates\includes\add_recipe_finish.html:60
+#: .\recipes\templates\includes\add_recipe_start.html:100
+msgid "your are creating a recipe in your account"
+msgstr "You are creating a recipe in your account."
+
+#: .\recipes\templates\includes\add_recipe_finish.html:66
+msgid "finish"
+msgstr "Finish"
+
+#: .\recipes\templates\includes\add_recipe_finish.html:72
+#, fuzzy
+#| msgid "recipe name"
+msgid "recipe picture"
+msgstr "Recipe's name"
+
+#: .\recipes\templates\includes\add_recipe_finish.html:76
+#, fuzzy
+#| msgid "your_recipe"
+msgid "edit for recipe"
+msgstr "Your recipes"
+
+#: .\recipes\templates\includes\add_recipe_start.html:5
+msgid "create a new recipe"
+msgstr "Create a new recipe"
+
+#: .\recipes\templates\includes\add_recipe_start.html:8
+msgid ""
+"you should create the recipes to populate your accounts and get many "
+"followers"
+msgstr ""
+"You should create the recipes to populate your accounts and get many "
+"followers"
+
+#: .\recipes\templates\includes\add_recipe_start.html:16
+msgid "recipe name"
+msgstr "Recipe's name"
+
+#: .\recipes\templates\includes\add_recipe_start.html:25
+msgid "description"
+msgstr "Description"
+
+#: .\recipes\templates\includes\add_recipe_start.html:33
+msgid "help people who whant to make your recipe"
+msgstr "Help people who want to make your recipe."
+
+#: .\recipes\templates\includes\add_recipe_start.html:38
+msgid "specify the nbre de persons"
+msgstr "Specify the nomber of persons"
+
+#: .\recipes\templates\includes\add_recipe_start.html:46
+msgid "specify the time of preparation"
+msgstr "Specify the time of preparation (in minutes) :"
+
+#: .\recipes\templates\includes\add_recipe_start.html:54
+msgid "specify the time of cuisson"
+msgstr "Specify the time of cuisson (in minutes) :"
+
+#: .\recipes\templates\includes\add_recipe_start.html:64
+msgid "please choice the status of your recipe"
+msgstr "Please select the status of your recipe."
+
+#: .\recipes\templates\includes\add_recipe_start.html:67
+msgid "explication of public and private recipe"
+msgstr ""
+"A public is visible by anyone on the internet. In the case of private recipe "
+"you choice who can see."
+
+#: .\recipes\templates\includes\add_recipe_start.html:106
+msgid "next"
+msgstr "Next"
+
+#: .\templates\pages\home.html:20
+msgid "add"
+msgstr "Add"
+
+#: .\templates\pages\home.html:24
+msgid "f_r"
+msgstr "Find recipes."
+
+#: .\templates\pages\home.html:42
+msgid "show_more"
+msgstr "Show more"
+
+#: .\templates\pages\home.html:59
+msgid "home_helper_title"
+msgstr ""
+"Discover interesting recipes and people to populate your personal news feeds"
+
+#: .\templates\pages\home.html:62
+msgid "home_helper_news"
+msgstr ""
+"Your news feeds help you keep up with recent activity on recipes you watch "
+"or star and people you follow."
+
+#: .\templates\pages\home.html:65
+msgid "why_not_see"
+msgstr "If you can see this text it means that either you are not"
+
+#: .\templates\pages\home.html:67
+msgid "follow_user"
+msgstr "follow a chef"
+
+#: .\templates\pages\home.html:69 .\templates\pages\landing.html:32
+msgid "or"
+msgstr "or"
+
+#: .\templates\pages\home.html:71
+msgid "p_r"
+msgstr "they have not create a public recipe."
+
+#: .\templates\pages\home.html:84
+msgid "response_to_war"
+msgstr "Our response to the war in Ukraine."
+
+#: .\templates\pages\home.html:87
+msgid "war_para"
+msgstr ""
+"Kiche is united to the people in Ukraine and the international community."
+
+#: .\templates\pages\home.html:90
+msgid "read_more"
+msgstr "Read more"
+
+#: .\templates\pages\landing.html:26
+msgid "lan_title"
+msgstr "Not need for paper or pen to create recipe."
+
+#: .\templates\pages\landing.html:29
+msgid "lan_p"
+msgstr "Just login and have access to all your recipes. Very simple isn't it."
+
+#: .\templates\pages\landing.html:32
+msgid "download"
+msgstr "Download"
+
+#: .\templates\pages\landing.html:35
+msgid "lan_why"
+msgstr "Why use Kiche ?"
+
+#: .\templates\pages\landing.html:41
+msgid "lan_first_reason"
+msgstr "Very easy recipe creation !"
+
+#: .\templates\pages\landing.html:47
+msgid "lan_second_reason"
+msgstr "Free recipe hosting !"
+
+#: .\templates\pages\landing.html:53
+msgid "lan_third_reason"
+msgstr "Meeting with chefs from around the world!"
+
+#: .\templates\partials\_nav.html:11
+msgid "find_nav"
+msgstr "Find or jump in a recipe"
+
+#: .\templates\partials\_nav.html:39
+msgid "add_recipe"
+msgstr "Add recipe"
+
+#: .\templates\partials\_nav.html:45
+msgid "add_coll"
+msgstr "Add friend"
+
+#: .\templates\partials\_nav.html:54
+msgid "sign_as"
+msgstr "Signed in as "
+
+#: .\templates\partials\_nav.html:63
+msgid "your_profile"
+msgstr "Your profile"
+
+#: .\templates\partials\_nav.html:75
+msgid "fav_recipes"
+msgstr "Favorites recipes"
+
+#: .\templates\partials\_nav.html:83
+msgid "help"
+msgstr "Help"
+
+#: .\templates\partials\_nav.html:97
+msgid "logout"
+msgstr "Logout"
+
+msgid "en"
+msgstr "English"
+
+msgid "fr"
+msgstr "French"
+
+msgid "es"
+msgstr "Spain"
+
+msgid "de"
+msgstr "Deutsch"

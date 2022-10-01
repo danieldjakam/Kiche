@@ -1,0 +1,236 @@
+/* Navigation */
+
+.navbar{
+    display: flex;
+    align-items: center;
+    background-color: #161b22; 
+    justify-content: space-between;
+    height: 60px;
+    padding: 0 30px;
+}
+.navbar-brand{
+    text-decoration: none;
+    color: #000;
+    background: #fff;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    transition: 1s;
+}
+.navbar-brand:hover{
+    background: #41A3FA;
+}
+.navbar-left{
+    display: flex;
+    align-items: center;
+}
+.navbar-left > form{
+    position: relative;
+}
+.navbar-left > form > span{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    border: 1px solid #fff;
+    height: 12.5px;
+    width: 10px;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    font-weight: 900;
+    border-radius: 5px;
+    padding: 5px;
+    align-items: center;
+    color: #fff;
+    font-size: 13px;
+}
+.navbar-left > form > input{
+    background: #000;
+    color: #ffff;
+    border: 1px solid #dedede9f;
+    border-radius: 5px;
+    padding: 7.5px 5px;
+    width: 300px;
+    height: 20px;
+    margin-left: 20px;
+    transition: width .5s;
+}
+.navbar-left > form > input:focus{
+    border: 1px solid #fff;
+    width: 350px;
+}
+.navbar > span > i{
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.navbar-rigth{
+    display: flex;
+    align-items: center;
+}
+.navbar-rigth > .bell_item{
+    position: relative;
+}
+.navbar-rigth > .bell_item.active::after{
+    content: '';
+    width: 7.5px;
+    height: 7.5px;
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    right: -1px;
+    background: #41A3FA;
+}
+.navbar-rigth > .ico{
+    display: flex;
+    margin-right: 20px;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+}
+.navbar-rigth > .ico:last-child{
+    margin-right: 0;
+}
+.navbar-rigth > .ico > i{
+    margin-left: 5px;
+}
+.navbar-rigth > .ico > img{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border-radius: 50%;
+}
+.navbar-rigth > .ico > img::after{
+    content: 'fdsf';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #62caf3;
+}
+.dropdown{
+    position: absolute;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-top: 2px;
+    list-style: none;
+    background-color: #161b22;
+    background-clip: padding-box;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    box-shadow: 0 8px 24px #010409;
+}
+.dropdown.hidden{
+    display: none;
+}
+.dropdown > i{
+    position: absolute;
+    top: -22.5px;
+    right: 13px;
+    font-size: 2rem;
+    color: #161b22;
+}
+.dropdown > .links{
+    padding: 10px 0;
+    border-bottom: 1px solid #fff;
+}
+.dropdown > .links:last-child{
+    border: none;
+}
+.dropdown > .links > .link{
+    display: flex;
+    padding: 10px 10px 10px 26px;
+    overflow: hidden;
+    color: #c9d1d9;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 1.2rem;
+    text-decoration: none;
+    align-items: center;
+    justify-content: space-between;
+}
+.dropdown > .links > .link:hover{
+    background: #41A3FA;
+    color: #fff;
+}
+.links > .link.active::after{
+    display: block;
+    content: '';
+    background: #41A3FA;
+    width: 10px;
+    height: 10px;   
+    border-radius: 50%;
+}
+.links > .link.active:hover:after{
+    background: #fff;
+}
+.dropdown > .links > .link > .gr{
+    margin-right: 20px;
+}
+.dropdown > .links > .link > .gr > i{
+    margin-right: 5px;
+    width: 15px;
+}
+.add_dropdown{
+    top: 39px;
+    right: 85px;
+    z-index: 30;
+}
+.profile_dropdown{      
+    position: absolute;
+    top: 39px;
+    right: 20px;
+    z-index: 100;
+}
+.profile_dropdown > .head{
+    color: rgba(255, 255, 255, 0.432);
+    font-size: 1.1rem;
+}
+.profile_dropdown > .head > .user{
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 624px) and (min-width: 570px) {
+    .navbar-left > form > input:focus{
+        border: 1px solid #fff;
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .navbar-left > form > input:focus{
+        border: 1px solid #fff;
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .navbar-left > form > input{
+        display: none;
+    }
+    .navbar-left > form > span{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 250px) {
+    .navbar{
+        display: flex;
+        justify-content: space-around;
+    }
+    .navbar-left > form > input{
+        display: none;
+    }
+    .navbar-brand{
+        display: none;
+    }
+}

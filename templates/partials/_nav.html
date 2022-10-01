@@ -1,0 +1,101 @@
+{% load static %}
+{% load i18n %}
+
+<link rel="stylesheet" href="{% static 'css/nav.css' %}">
+<nav class="navbar" id="navbar">
+    <div class="navbar-left">
+        <a href="{% url 'landing' %}" class="navbar-brand">
+            <i class="fa fa-pencil"></i>
+        </a>
+        <form action="" method="post"id="jumpForm">
+            <input type="text" name="" placeholder="{% translate 'find_nav' %}" id="jumpFormInput">
+            <span class="icon" id="jumpFormIcon">
+                /
+            </span>
+        </form>
+    </div>
+    <div class="navbar-rigth">
+        <a href="{% url 'notifs:all' %}" class="ico item bell_item active">
+            <i class="fa fa-bell-o"></i>
+        </a>
+        <span class="ico" id="add_dropdown_on">
+            <i class="fa fa-plus"></i>
+            <i class="fa fa-caret-down"></i>
+        </span>
+        <div class="ico" id="profile_dropdown_on">
+            <img src=" {% if profile.avatar %} {{ profile.avatar.url }} {% else %} {% static 'images/default_avatar.jpeg' %}  {% endif %} " alt="" class="avatar unread">
+            <span class="unread"></span>
+            <i class="fa fa-caret-down"></i>
+        </div>
+    </div>
+</nav>
+
+<div class="dropdown add_dropdown hidden" id="add_dropdown">
+    <i class="fa fa-caret-up"></i>
+    <div class="links">
+        <a href="{% url 'recipes:add' %}" class="link">
+            <div class="gr">
+                <i class="fa fa-plus"></i>
+                {% translate 'add_recipe' %}
+            </div>
+        </a>
+        <a href="#" class="link">
+            <div class="gr">
+                <i class="fa fa-user-plus"></i>
+                {% translate 'add_coll' %}
+            </div>
+        </a>
+    </div>
+</div>
+
+<div class="dropdown profile_dropdown hidden" id="profile_dropdown">
+    <i class="fa fa-caret-up"></i>
+    <div class="head links" style="padding: 0 10px;">
+        {% translate 'sign_as' %} <br>
+        <span class="user">
+            {{request.user.username}}
+        </span>
+    </div>
+    <div class="links">
+        <a href="{% url 'accounts:profile' %}" class="link">
+            <div class="gr">
+                <i class="fa fa-user"></i>
+                {% translate 'your_profile' %}
+            </div>
+        </a>
+        <a href="{% url 'recipes:all' %}" class="link">
+            <div class="gr">
+                <i class="fa fa-edit"></i>
+                {% translate 'your_recipe' %}
+            </div>
+        </a>
+        <a href="{% url 'recipes:favorites' %}" class="link">
+            <div class="gr">
+                <i class="fa fa-star" style="color: yellow;"></i>
+                {% translate 'fav_recipes' %}
+            </div>
+        </a>
+    </div>
+    <div class="links">
+        <a href="{% url 'help' %}" class="link">
+            <div class="gr">
+                <i class="fa fa-question-circle"></i>
+                {% translate 'help' %}
+            </div>
+        </a>
+        <a href="{% url 'accounts:settings' %}" class="link active">
+            <div class="gr">
+                <i class="fa fa-cog"></i>
+                {% translate 'settings' %}
+            </div>
+        </a>
+    </div>
+    <div class="links">
+        <a href="{% url 'accounts:logout' %}" class="link">
+            <div class="gr">
+                <i class="fa fa-sign-out"></i>
+                {% translate 'logout' %}
+            </div>
+        </a>
+    </div>
+</div>

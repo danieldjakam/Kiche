@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {% block title %} {% endblock %} </title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'fw/css/fw.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/logo1.png' %}" type="image/png">
+    {% block stylesheets %}
+
+    {% endblock %}
+</head>
+<body class="">
+    {% load i18n %}
+    {% block content %}
+
+    {% endblock %}
+
+    {% block js %}
+
+    {% endblock %}
+    
+    <script src="{% static 'js/base.js' %}"></script>
+    <script src="{% static 'js/nav.js' %}"></script>
+</body>
+</html>

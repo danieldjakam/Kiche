@@ -1,0 +1,32 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block title %} Kiche | Make easily recipes {% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+{% endblock %}
+
+
+{% block content %}
+    {% include 'partials/_nav.html' %}
+    <div class="profile_view" id="view">
+        <div class="top">
+            <div class="links">
+                <!-- <input type="color" name="" id=""> -->
+                <a href="{% url 'accounts:profile' %}" class="link">
+                    <i class="fa fa-user"></i>
+                    Overview
+                </a>
+                <a href="?tab=recipes" class="link actif">
+                    <i class="fa fa-file"></i>
+                    Recipes
+                    <span class="nber">
+                        {{recipes|length}}
+                    </span>
+                </a>
+            </div>
+        </div>
+
+        Recipes
+    </div>
+{% endblock %}

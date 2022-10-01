@@ -1,0 +1,31 @@
+*{
+    font-family: 'Poppins Regular';
+    margin: 0;
+    padding: 0;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    width: 10px;
+    background: rgba(0, 0, 0, 0.2);
+}
+::-webkit-scrollbar-thumb{
+    width: 10px;
+    background: #41A3FA;
+    border-radius: 10px;
+}
+.text-danger{
+    color: red;
+}       
+
+.dark_mode::-webkit-scrollbar-track{
+    background: rgba(255, 255, 255, 0.2);
+}
+.dark_mode *::-webkit-scrollbar-track{
+    background: rgba(255, 255, 255, 0.2);
+}
+
+a{
+    text-decoration: none;
+}

@@ -1,0 +1,289 @@
+.settings_view{
+    padding: 20px;
+}
+body{
+    background: #EBEDEF;
+}
+.setting{
+    margin-top: 20px;
+}
+.setting > .title{
+    margin-left: 30px;
+}
+.setting > hr{
+    width: 90%;
+    margin: 10px 0;
+}
+.setting > p{
+    margin-left: 30px;
+}
+
+.choices{
+    margin-top: 10px;
+    margin-left: 30px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.choices > .choice{
+    border: 2px solid #30363d;
+    width: 200px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.choices > .choice > .exemple{
+    height: 150px;
+    pointer-events: none;
+    background: #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.choices > .choice > .name{
+    padding: 10px;
+    pointer-events: none;
+    background: #0D1117;
+    color: #fff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.choice > .exemple > .header{
+    width: 100%;
+    pointer-events: none;
+    display: flex;
+    height: 20px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    justify-content: space-between;
+}
+
+select{
+    padding: 10px;
+    background: #161B22;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 10px;
+}
+option{
+    padding: 10px;
+    cursor: pointer;
+}
+.choice > .exemple > .header > div{
+    width: 39px;
+    pointer-events: none;
+    border-radius: 20px;
+    margin-top: 2.5px;
+    height: 10px;
+}
+
+.choice > .exemple > .body{
+    pointer-events: none;
+}
+
+.choice > .exemple > .body > .first_line{
+    display: flex;
+    pointer-events: none;
+    padding: 0 10px;
+    justify-content: space-between;
+}
+
+.choice > .exemple > .body > .first_line > div:first-child{
+    width: 50%;
+    height: 15px;
+    pointer-events: none;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.choice.checked{
+    border: 2px solid #1ce !important;
+}
+
+.choice > .exemple > .body > .first_line > div:last-child{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    pointer-events: none;
+}
+
+
+.choice > .exemple > .body > .first_line > div:last-child > div:first-child{
+    width: 15px;
+    height: 15px;
+    background: green;
+    pointer-events: none;
+    margin-right: 5px;
+}
+
+.choice > .exemple > .body > .first_line > div:last-child > div:last-child{
+    width: 15px;
+    height: 15px;
+    pointer-events: none;
+    background: red;
+}
+
+.choice > .exemple > .body > .second_line{
+    display: flex;
+    pointer-events: none;
+}
+
+.choice > .exemple > .body > .second_line > .big{
+    height: 90px;
+    margin-top: 10px;
+    margin-left: 10px;
+    pointer-events: none;
+    width: 60%;
+    margin-bottom: 10px;
+}
+
+.choice > .exemple > .body > .second_line > .big > .head{
+    height: 10px;
+    width: 100%;
+    pointer-events: none;
+}
+
+
+.choice > .exemple > .body > .second_line > .small{
+    height: 35px;
+    margin-top: 10px;
+    margin-left: 6px;
+    width: 20%;
+    pointer-events: none;
+}
+
+#lang_choice .example{
+    background: #1ce;
+    width: 100%;
+    pointer-events: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 150px;
+}
+
+#lang_choice .example > img{
+    width: 100%;
+    border-top-left-radius: 10px;
+    height: 100%;
+    border-top-right-radius: 10px;
+    pointer-events: none;
+}
+#lang_choice {
+    text-decoration: none;
+}
+
+
+.ligth > .exemple > .header{
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+
+.ligth > .exemple > .header > div{
+    background: rgba(0, 0, 0, .1);
+}
+
+.ligth > .exemple > .body > .first_line > div:first-child{
+    background: rgba(0, 0, 0, .1);
+}
+
+.ligth > .exemple > .body > .second_line > .big{
+    background: rgba(0, 0, 0, .07);
+}
+
+.ligth > .exemple > .body > .second_line > .big > .head{
+    background: rgba(0, 0, 0, .1);
+}
+
+
+.ligth > .exemple > .body > .second_line > .small{
+    background: rgba(0, 0, 0, .07);
+}
+
+
+
+.dark > .exemple > .header{
+    background: #343A43;
+    border-bottom: 1px solid rgba(0, 0, 0, .7);
+}
+
+.dark > .exemple > .body{
+    background: #161B22;
+}
+
+.dark > .exemple > .header > div{
+    background: rgba(255, 255, 255, .2);
+}
+
+.dark > .exemple > .body > .first_line > div:first-child{
+    background: rgba(255, 255, 255, .1);
+}
+
+.dark > .exemple > .body > .second_line > .big{
+    background: rgba(255, 255, 255, .07);
+}
+
+.dark > .exemple > .body > .second_line > .big > .head{
+    background: rgba(255, 255, 255, .2);
+}
+
+
+.dark > .exemple > .body > .second_line > .small{
+    background: rgba(255, 255, 255, .07);
+}
+
+
+/* Dark mode */
+
+.dark_mode{
+    background: #0D1117;
+}
+
+.dark_mode > .settings_view > h1{
+    color: #fff;
+}
+
+.dark_mode > .settings_view > .setting{
+    color: #fff;
+}
+.dark_mode > .settings_view > .setting > p{
+    color: rgba(255, 255, 255, .6);
+}
+
+/* Responsive */
+
+@media screen and (max-width: 800px) {
+    .choices > .choice{
+        width: 160px;
+    }
+    
+}
+@media screen and (max-width: 670px) {
+    .choices{
+        flex-wrap: wrap;
+    }
+    
+}
+
+
+@media screen and (max-width: 454px) {
+    .setting > .title{
+        margin: 0;
+    }
+    .setting > p{
+        margin: 0;
+    }
+    .setting > .choices{
+        margin: 0;
+    }
+    .setting > .choices > .choice{
+        width: 200px;
+    }
+    .setting > .choices > select{
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+}

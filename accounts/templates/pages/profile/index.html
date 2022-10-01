@@ -1,0 +1,149 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %} {{request.user.username }} | profile {% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+{% endblock %}
+
+
+{% block content %}
+    {% include 'partials/_nav.html' %}
+    <div class="profile_view" id="view">
+        <div class="top">
+            <div class="links">
+                <a href="{% url 'accounts:profile' %}" class="link  {%if not is_recipe_page%} actif {% endif %}">
+                    <i class="fa fa-user"></i>
+                    {% translate 'overview' %}
+                </a>
+                <a href="?tab=recipes" class="link {%if is_recipe_page%} actif {% endif %}">
+                    <i class="fa fa-file"></i>
+                    {% translate 'hj' %}
+                    <span class="nber">
+                        {{recipes|length}}
+                    </span>
+                </a>
+            </div>
+        </div>
+
+        <div class="glo">
+
+            {% if not is_recipe_page %}
+                <div class="profile_box">
+                    <div class="img">
+                        <img src="{% if profile.avatar %} {{ profile.avatar.url }} {% else %} {% static 'images/default_avatar.jpeg' %} {% endif %}" id="avatarProfile" alt="">
+                        <label class="avatarChangerBox hidden" for="id_avatar" id="changeAvatarBtn">
+                            <i class="fa fa-camera"></i>
+                        </label>
+                    </div>
+                    <div class="info" id="infosBox">
+                        <h3>{{request.user.username}}</h3>
+                        <button class="edit" id="setIsEditForm">
+                            {% translate 'po' %}
+                        </button>
+                        <div class="follow">
+                            <span>
+                                <i class="fa fa-users"></i>
+                            <b>0</b> {% translate 'fp' %}
+                            </span>
+                            <span>
+                                <i class="fa fa-users"></i>
+                                <b>0</b> {% translate 'fs' %}
+                            </span>        
+                        </div>
+                    </div>
+                    
+                    <form method="post" enctype="multipart/form-data" class="hidden" id="editForm">
+                        {% csrf_token %}
+                        {{form.as_p}}
+                        <div class="btns">
+                            <p id="cancelFormBtn">
+                                {% translate 'cancel' %}
+                            </p>
+                            <button type="submit">{% translate 'save' %}</button>
+                        </div>
+                    </form>
+                </div>
+            {% endif %}
+            
+            {% if not is_recipe_page %}
+                <div class="index">
+                    <h2 style="font-weight: normal; margin-top: 10px;"> {% translate 'll' %} </h2>
+                    <div class="recipes">
+                        {% for recipe in recipes %}
+                            <div class="recipe">
+                                <div class="first_line">
+                                    <a href="#">
+                                        {{recipe.name}}
+                                    </a>
+
+                                    <span>
+                                        {% if recipe.is_private %}
+                                            {% translate 'private' %}
+                                        {% else %}
+                                            {% translate 'public' %}
+                                        {% endif %}
+                                    </span>
+                                </div>
+                                <div class="date">
+                                    {% translate 'created' %} {%now 'd F Y'%}
+                                </div>
+                            </div>
+                        {% empty %}
+                            <div class="recipe empty">
+                                <h1>
+                                    {% translate 'have_not_create_recipe' %}
+                                </h1>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% else %}
+                <div class="recipes">
+                    <h2 style="font-weight: normal; margin-top: 10px;">{% translate 'your_recipe' %}</h2>
+                    <div class="recipes">
+                        {% for recipe in recipes %}
+                            <div class="recipe">
+                                <div class="first_line">
+                                    <span>
+                                        <a href="#">
+                                            {{recipe.name}}
+                                        </a>    
+                                        <span>
+                                            {% if recipe.is_private %}
+                                                {% translate 'private' %}
+                                            {% else %}
+                                                {% translate 'public' %}
+                                            {% endif %}
+                                        </span>
+                                    </span>
+                                    <button class="star {% if recipe.is_private %} yes {% endif %}">
+                                        <i class="fa fa-star "></i>
+                                    </button>
+                                </div>
+                                <div class="preparation">
+                                    {% lorem 12 w random %}
+                                </div>
+                                <em>
+                                    {% translate 'updated' %} {%now 'd F Y'%}
+                                </em>
+                            </div>
+                        {% empty %}
+                            <div class="recipe empty">
+                                <h1>
+                                    {% translate 'have_not_create_recipe' %}
+                                </h1>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script src="{% static 'js/profile.js' %}"></script>
+{% endblock %}

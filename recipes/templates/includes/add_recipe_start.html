@@ -1,0 +1,113 @@
+{% load i18n %}
+
+{% load static %}
+<div class="title">
+    <h1>
+        {% translate 'create a new recipe' %}
+    </h1>
+    <p>
+        {% translate 'you should create the recipes to populate your accounts and get many followers'%}
+    </p>
+</div>
+<form method="post">
+    {% csrf_token %}
+    <div class="part">
+        <div class="field name">
+            <label for="id_name">
+                {% translate 'recipe name' %} <span class="text-danger">*</span>
+            </label>
+            <input type="text" name="name" class="required" value="{{fields.name}}" required id="id_name">
+            <p>
+                Great recipes names are shot and memorables.
+            </p>
+        </div>
+        <div class="field description">
+            <label for="id_description">
+                {% translate 'description' %} <span class="p"> ({% translate 'optional' %}) </span>
+            </label>
+            <input type="text" name="description" value="{{fields.description}}" id="id_description">
+        </div>
+    </div>
+    <div class="part no_long">
+        <div class="title">
+            <h3>
+                {% translate 'help people who whant to make your recipe' %}
+            </h3>
+        </div>
+        <div class="field">
+            <label for="id_persom">
+                {% translate 'specify the nbre de persons' %} <span class="text-danger">*</span>
+            </label>
+            <input type="number" name="nbre_of_plates" value="{{fields.nbre_of_plates}}" class="required" required id="id_nbre_of_plates">
+            <p> 
+            </p>
+        </div>
+        <div class="field">
+            <label for="id_time_preparation">
+                {% translate 'specify the time of preparation' %} <span class="text-danger">*</span>
+            </label>
+            <input type="number" name="time_preparation" value="{{fields.time_preparation}}" class="required" required id="id_time_preparation">
+            <p>
+            </p>
+        </div>
+        <div class="field">
+            <label for="id_time_cuisson">
+                {% translate 'specify the time of cuisson' %} <span class="p">({% translate 'optional' %})</span>
+            </label>
+            <input type="number" name="time_cuisson" value="{{fields.time_cuisson}}" id="id_time_cuisson">
+            <p>
+            </p>
+        </div>
+    </div>
+    <div class="part no_long">
+        <div class="title">
+            <h3>
+                {% translate 'please choice the status of your recipe' %}
+            </h3>
+            <p>
+                {% translate 'explication of public and private recipe' %}
+            </p>
+        </div>
+        <div class="field radio">
+            <input type="radio" name="status" {% if fields.status == 'public' %} checked {% endif %} value="public" id="id_is_public">
+            <label for="id_is_public">
+                <i class="fa fa-book"></i>
+                <span>
+                    {% translate 'public' %}
+                </span>
+            </label>
+        </div>
+        <div class="field radio">
+            <input type="radio" name="status" {% if fields.status == 'private' %} checked {% endif %} value="private" id="id_is_private">
+            <label for="id_is_private">
+                <i class="fa fa-lock"></i>
+                <span>
+                    {% translate 'private' %}
+                </span>
+            </label>
+        </div>
+    </div>
+    <div class="part">
+        <p class="info">
+            {% if errors %}
+                <ul class="errors">
+                    {% for error in errors %}
+                        <li>
+                            <i class="fa fa-none-o"></i> {{error}}
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <i class="fa fa-info-circle"></i> {% translate 'your are creating a recipe in your account' %}
+            {% endif %}
+        </p>
+    </div>
+    <button class="add_recipe disabled">
+        <span>
+            {% translate 'next' %}
+        </span>
+    </button>
+</form>
+{% block js %}
+    <script src="{% static 'js/add_recipe.js' %}"></script>
+{% endblock %}

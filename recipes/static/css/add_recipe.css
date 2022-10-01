@@ -1,0 +1,238 @@
+.help_view{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+body{
+    background: #fff;
+}
+
+.help_view > .all{
+    background: #dedede;
+    margin-top: 0px;
+    padding: 20px;
+    padding-top: 0;
+    margin: 10px 0;
+}
+
+.help_view > .all > .title{
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, .3);
+    margin-bottom: 10px;
+}
+
+.help_view > .all > .title > h1{
+    font-size: 1.6rem;
+}
+
+.help_view > .all > .title > p{
+    color: rgba(0, 0, 0, .5);
+}
+
+.part {
+    border-bottom: 1px solid rgba(0, 0, 0, .5);
+    margin-bottom: 10px;    
+}
+
+.part .title > h3{
+    font-size: 1.1rem;
+}
+.part .title > p{
+    margin: 5px 0;
+    font-size: 1rem;
+    color: rgba(0, 0, 0, .5);
+}
+
+.field{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    margin-left: 30px;
+}
+
+.part.no_long .field {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 0;
+}
+.part.no_long label {
+    width: 500px;
+}
+.part.no_long .field input {
+    width: 50px;
+    margin-left: 30px;
+}
+
+input[type="radio"]{
+    accent-color: red;
+}
+
+.part:last-child{
+    margin-top: 0;
+}
+.field label{
+    width: max-content;
+}
+
+.field input{
+    background: #fff;
+    color: #000;
+    border: 1px solid rgba(0, 0, 0, .3);
+    padding: 7.5px 10px;
+    width: 80%;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.field input:focus{
+    outline: none;
+    border: 1px solid #000;
+}
+
+.field.name input{
+    width: 300px;
+}
+
+.field p{
+    color: rgba(0, 0, 0, .5);
+}
+
+.field textarea{
+    resize: vertical;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 1.1rem;
+    width: 90%;
+    height: 150px;
+}
+
+.radio label{
+    font-size: 1.2rem;
+    margin-top: 9px;
+    margin-bottom: 10px;
+}
+
+button.add_recipe{
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    background: green;
+    padding: 7.5px 12px;
+    font-size: 1.2rem;
+    border: 0;
+}
+
+button.add_recipe:hover{
+    background: rgb(10, 85, 10);
+}
+
+button > span{
+    padding: 7.5px 12px;
+}
+
+button.disabled{
+    opacity: .50;
+    filter: contrast(2);
+    cursor: not-allowed;
+}
+button.add_recipe.disabled:hover{
+    background: green;
+}
+
+
+label > .p{
+    color: rgba(0, 0, 0, 0.5);
+}   
+.part p.info{
+    color: rgba(0, 0, 0, .5);
+    padding: 10px;
+    padding-top: 0;
+    display: flex;
+    align-items: center;
+}
+
+.part p.info i{
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+.errors{
+    padding: 10px;
+    padding-top: 0;
+    color: red;
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+.finish_form{
+    display: flex;
+}
+
+.finish_form > .left{
+    width: calc(100% - 300px);
+}
+.finish_form > .rigth{
+    width: 300px;
+}
+
+.finish_form > .rigth > .field > .img{
+    width: 100%;
+}
+
+.finish_form > .rigth > .field > .img > img{
+    width: 100%;
+    height: 200px;
+    border-radius: 50%;
+}
+
+input[type="file"]{
+    display: none;
+}
+
+.finish_form > .rigth > .field > .img {
+    position: relative;
+}
+
+.finish_form > .rigth > .field > .img > label{
+    padding: 7.5px 10px;
+    border: 1px solid rgba(255, 255, 255, .3);
+    position: absolute;
+    left: 10px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, .9);
+    bottom: 20px;
+    cursor: pointer;
+    color: #fff;
+}
+
+/* Dark mode */
+
+.dark_mode{
+    background: #0D1117;
+    color: #fff;
+}
+
+.dark_mode .help_view > .all{
+    background: transparent;
+}
+
+.dark_mode .help_view > .all > .title{
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+}
+.dark_mode .field input, .dark_mode .field textarea{
+    background: #000;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, .3);
+}
+.dark_mode .field input:focus, .dark_mode .field textarea:focus{
+    border: 1px solid rgba(255, 255, 255, 1);
+}
+.dark_mode .part {
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+}
+
+.dark_mode .help_view > .all > .title > p, .dark_mode .part .title > p, .dark_mode .field p, .dark_mode label > .p, .dark_mode .part p.info{
+    color: rgba(255, 255, 255, .5);
+}

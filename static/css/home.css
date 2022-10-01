@@ -1,0 +1,364 @@
+.homeview{
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 50px);
+}
+.homeview > .left_part{
+    width: 300px;
+    background: #fff;
+}
+body{
+    overflow: hidden;
+}
+.homeview > .left_part > .head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding: 10px 20px;
+    color: #000;
+}
+.homeview > .left_part > .head > .name{
+    font-size: 1.3rem;
+}
+
+.homeview > .left_part > .head > .add{
+    background: rgba(0, 128, 0, 0.781);
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+}
+.homeview > .left_part > .head > .add:hover{
+    background: rgba(0, 128, 0, 0.5);
+}
+.homeview > .left_part > .head > .add > i{
+    margin-right: 5px;
+}
+.homeview > .left_part > form{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+.homeview > .left_part > form > input{
+    width: 250px;
+    background: #EBEDEF;
+    padding: 5px 10px;
+    color: #000;
+    font-size: 17px;
+    border-radius: 7.5px;
+    border: 1px solid rgba(0, 0, 0, 0.132);
+}
+
+.homeview > .left_part > form > input:focus{
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.82);
+}
+
+.homeview > .left_part > .allRecettes{
+    list-style: none;
+}
+
+.homeview > .left_part > .allRecettes > .item{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+.homeview > .left_part > .allRecettes > .item > img{
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+}
+.homeview > .left_part > .allRecettes > .item > .name{
+    color: #000;
+    font-size: 1.3rem;
+    margin-left: 10px;
+}
+
+.homeview > .left_part > .allRecettes > .item:hover{
+    color: #41A3FA;
+}
+.homeview > .left_part > .more{
+    margin-left: 20px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 1);
+}
+
+.homeview > .left_part > .more:hover{
+    color: #41A3FA;
+}
+
+.homeview > .left_part > hr{
+    margin-top: 10px;
+    width: 85%;
+    margin-left: 7.5%;
+}
+
+.homeview > .left_part > .footer{
+    padding: 20px 15px;
+    display: flex;
+    align-items: center;
+}
+.left_part > .footer > .logo{
+    background: #000;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer > .logo > i{
+    color: #fff;
+}
+.footer > span{
+    color: #000;
+    font-size: 1.2rem;
+    margin-left: 10px;
+    font-weight: 900;
+}
+.homeview > .rigth_part{
+    background: #EBEDEF;
+    width: calc(100% - 300px);
+    display: flex;
+}
+
+.homeview > .rigth_part > .helper{
+    width: calc(100% - (300px + 40px));
+    background: transparent;
+}
+
+.homeview > .rigth_part > .helper > .feeds{
+    background: rgba(255, 255, 255, 1);
+    padding: 20px 30px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.homeview > .rigth_part > .helper > .feeds > h1{
+    color: #000;
+    font-size: 1.50rem;
+    margin-bottom: 20px;    
+}
+
+.homeview > .rigth_part > .helper > .feeds > p{
+    color: rgba(0, 0, 0, 0.506);
+    font-size: 1rem;
+    margin-bottom: 10px;
+    line-height: 25px;
+}
+
+.homeview > .rigth_part > .helper > .feeds > p a{
+    text-decoration: none;
+    color: #41A3FA;
+}
+
+.homeview > .rigth_part > .helper > .feeds > p a:hover{
+    color: #2e983c;
+}
+
+.homeview > .rigth_part > .helper > .feeds > p:last-child{
+    margin-bottom: 0;
+}
+
+.homeview > .rigth_part > .response_to_war{
+    margin: 20px 20px ;
+    width: 300px;
+    height: max-content;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 1);
+}
+
+.response_to_war > .logo{
+    height: 39px;
+    background: #000;
+    width: 39px;
+    border-radius: 50%;
+    position: relative;
+}
+.response_to_war > .logo > .top{
+    background: blue;
+    width: 100%;
+    height: 50%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+.response_to_war > .logo > .bottom{
+    background: yellow;
+    width: 100%;
+    height: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+.response_to_war > .logo > i{
+    position: absolute;
+    font-size: 1.5rem;
+    color: #000;
+    top: 7.5px;
+    left: 10px;
+}
+.response_to_war > .content > h1{
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    margin: 10px 0;
+}
+.response_to_war > .content > p{
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 1    rem;
+    margin-bottom: 10px;
+}
+.response_to_war > .content > a{
+    color: #41A3FA;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+.response_to_war > .content > a:hover{
+    color: #2e6a98;
+}
+
+
+/* Dark mode */
+
+.dark_mode .homeview > .left_part{
+    background: #0D1117;
+}
+
+
+.dark_mode .homeview > .left_part > .head{
+    color: #fff;
+}
+
+.dark_mode .homeview > .left_part > form > input{
+    background: #000;
+    color: #fff;
+    border: 1px solid #dedede9f;
+}
+
+.dark_mode .homeview > .left_part > form > input:focus{
+    outline: none;
+    border: 1px solid #fff;
+}
+.dark_mode .homeview > .left_part > .allRecettes > .item > .name{
+    color: #fff;
+}
+
+.dark_mode .homeview > .left_part > .more{
+    color: rgba(222, 222, 222, 0.806);
+}
+
+.dark_mode .left_part > .footer > .logo{
+    background: #fff;
+}
+.dark_mode .footer > .logo > i{
+    color: #000;
+}
+.dark_mode .footer > span{
+    color: #fff;
+}
+
+.dark_mode .homeview > .rigth_part{
+    background: #000;
+}
+
+.dark_mode .homeview > .rigth_part > .helper > .feeds{
+    background: rgba(222, 222, 222, 0.156);
+}
+
+.dark_mode .homeview > .rigth_part > .helper > .feeds > h1{
+    color: #fff;
+}
+
+.dark_mode .homeview > .rigth_part > .helper > .feeds > p{
+    color: rgba(222, 222, 222, 0.706);
+}
+
+.dark_mode .homeview > .rigth_part > .helper > .feeds > p a:hover{
+    color: #2e6a98;
+}
+
+.dark_mode .homeview > .rigth_part > .response_to_war{
+    background: rgba(255, 255, 255, 0.132);
+}
+
+.dark_mode .response_to_war > .content > h1{
+    color: #fff;
+}
+
+
+.dark_mode .response_to_war > .content > p{
+    color: rgba(222, 222, 222, 0.806);
+}
+
+
+/* Responsive */
+
+@media screen and (max-width: 1050px) {
+    .homeview > .rigth_part{
+        display: block;
+        max-height: calc(100vh - 60px);
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    .homeview > .rigth_part > .helper{
+        width: 100%;
+    }
+    .homeview > .rigth_part > .response_to_war{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 728px) {
+    .homeview{
+        overflow: hidden;
+    }
+    .homeview > .left_part{
+        width: 130px;    
+    }
+    .homeview > .left_part input{
+        display: none;
+    }
+    .homeview > .left_part > .allRecettes > .item > span {
+        display: none;
+    }
+    .homeview > .left_part > .head{
+        display: block;
+    }
+    .homeview > .rigth_part{
+        width: calc(100vw - 100px);
+    }
+    .left_part > .footer{
+        flex-direction: column;
+    }
+    .left_part > .footer> .logo{
+        background: #fff;
+    }
+    .footer > .logo > i{
+        color: #000;
+    }
+    .footer > span{
+        color: #fff;
+    }
+}
+
+
+@media screen and (max-width: 492px) {
+    .homeview{
+        overflow: hidden;
+    }
+    .homeview > .left_part{
+        width: 130px;    
+        display: none;
+    }
+    .homeview > .rigth_part{
+        width: calc(100vw);
+    }
+}

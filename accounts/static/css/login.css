@@ -1,0 +1,211 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+}
+.global{
+    width: 100%;
+    display: flex;
+}
+.global > .leftPart{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow-y: scroll;
+    justify-content: center;    
+}
+.leftPart::-webkit-scrollbar-track{
+    background: none;
+}
+.top{
+    margin: 20px 50px;
+    position: absolute;
+    top: 20px;
+    left: 1px;
+}
+
+.logo{
+    width: 50px;
+    height: 50px;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    text-decoration: none;
+}
+.logo:hover{
+    background: #41A3FA;
+}
+.logo > i{
+    color: #fff;
+    font-size: 1.39rem;
+}
+.global > .leftPart > .form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+.global > .leftPart > .form > form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.global > .leftPart > .form > form > h1{
+    font-weight: 900;
+    /* margin-bottom: 30px; */
+}
+
+.leftPart > .form > form > ul.errorlist{
+    list-style-type: none;
+    color: red;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.leftPart > .form > form > p > label{
+    color: rgba(0, 0, 0, 0.75);
+    font-size: 1.3rem;
+    width: 100%;
+    margin-bottom: 2px;
+    float: left;
+    text-align: left;
+}
+
+.leftPart > .form > form > p > input{
+    border: none;
+    width: 100%;
+    border-bottom: 3px solid #bbcfe2;
+    background: none;
+    margin-bottom: 30px;
+    font-size: 1.7rem;
+    outline: none;
+}
+
+.leftPart > .form > form > button{
+    padding: 10px 60px;
+    border-radius: 39px;
+    border: none;
+    background: #41A3FA;
+    color: #fff;
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+.leftPart > .form > form > button:hover{
+    background: linear-gradient(to right,#120c75, #104268);
+}
+
+.leftPart > .form > p.question{
+    width: 100%;
+    font-size: 1rem;
+    margin-top: 10px;
+    text-align: right;
+}
+
+.leftPart > .form > p.question > a{
+    text-decoration: none;
+    color: #6eb5ed;
+}
+
+.leftPart > .form > p.question > a:hover{
+    text-decoration: none;
+    color: #292398;
+}
+
+.leftPart > .form > form > input:focus{
+    border: none;
+    outline: none;
+    width: 100%;
+    border-bottom: 3px solid #bbcfe2;
+    background: none;
+    margin-bottom: 30px;
+}
+
+.leftPart > .form > .question{
+    text-align: right;
+}
+
+.global > .rightPart{
+    width: 50%;
+    position: relative;
+}
+.global > .rightPart > img{
+    width: 100%;
+    height: 105vh;
+}
+.global > .rightPart > .info{
+    position: absolute;
+    bottom: 80px;
+    left: 80px;
+    width: 50%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #fff;
+}
+
+/* Dark mode */
+
+.dark_mode{
+    background: #161b22;
+    color: #fff;
+}
+
+.dark_mode label{
+    color: #ffff;
+}
+
+.dark_mode .logo{
+    background: #fff;
+}
+
+.dark_mode .logo:hover{
+    background: #41A3FA;
+}
+
+.dark_mode .logo > i{
+    color: #000;
+}
+
+.dark_mode .leftPart  > .form > form > p > label {
+    color: #fff;
+}
+.dark_mode input{
+    color: #41A3FA;
+}
+
+/* Responsive */
+
+
+@media screen and (max-width: 1055px) {
+    .global > .rightPart{
+        width: 39%;
+    }
+    .global > .leftPart{
+        width: 61%;
+    }
+    .global > .leftPart > .form{
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 635px) {
+    .global > .rightPart {
+        display: none;
+    }
+    .global > .leftPart {
+        width: 100%;
+        max-height: calc(100vh - 10px);
+        overflow-y: scroll;
+    }
+}

@@ -1,0 +1,44 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %} Login | Cake {% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="global">
+        <div class="leftPart">
+            <div class="top">
+                <a href="{% url 'landing' %}" class="logo">
+                    <i class="fa fa-pencil"></i>
+                </a>
+        
+            </div>
+            <div class="form">
+                
+                <form method="post">
+                    <h1>{% translate 'login' %}</h1>
+                    {% csrf_token %}
+                    {{form.as_p}}
+
+                    <button type="submit">{% translate 'login' %}</button>
+                </form>
+
+                <p class="question">
+                    {% translate 'login_ques' %} <a href="{% url 'accounts:register' %}">{% translate 'register' %}</a>
+                </p>
+            </div>
+        </div>
+        <div class="rightPart">
+            <img src="{% static 'images/1.png' %}" alt="">
+            <div class="info">
+                {% translate 'need' %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,426 @@
+
+body{
+    background: #EBEDEF;
+}
+
+.profile_view > .top {
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid #30363d;
+}
+
+
+.profile_view > .top > .links{
+    padding: 10px;
+}
+
+.profile_view > .top > .links > .link{
+    margin-left: 30px;
+    font-size: 1.2rem;
+    color: #000;
+    position: relative;
+    text-decoration: none;
+}
+
+
+.profile_view > .top > .links > .link.actif{
+    font-weight: 500;   
+    color: rgb(11, 161, 187);
+}
+
+.profile_view > .top > .links > .link.actif::after{
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 130px;
+    background: rgb(11, 161, 187);
+    bottom: -13px;
+    left: -15px;
+}
+
+.profile_view > .top > .links > .link > .nber{
+    display: flex;
+    width: 30px;
+    position: absolute;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    right: -35px;
+    height: 30px;
+    background: rgba(0, 0, 0, .1);
+}
+
+.profile_view > .glo > .profile_box{
+    padding: 20px;
+    width: 350px;
+    background: rgba(0, 0, 0, .08);
+}
+
+.profile_view > .glo > .profile_box > .img{
+    margin-top: -30px;
+    position: relative;
+}
+
+.glo > .profile_box > .img > .avatarChangerBox{
+    position: absolute;
+    top: 70%;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1ce;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.glo > .profile_box > .img > .avatarChangerBox:hover{
+    background: rgb(40, 95, 105);
+}
+
+.profile_view > .glo > .profile_box > .img > img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+.profile_view > .glo{
+    display: flex;
+}
+
+.profile_view > .glo > .profile_box > .info{
+    margin-top: 20px;   
+}
+
+.profile_box .info > h3{
+    color: rgba(0, 0, 0, .6);
+    font-size: 1.3em;
+}
+
+.profile_box .info > button{
+    padding: 10px 12px;
+    width: 100%;
+    margin: 20px 0;
+    background: rgba(0, 0, 0, .1);
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, .2);
+}
+
+.profile_box .info > button:hover{
+    background: rgba(0, 0, 0, .5);
+}
+.profile_box > .info > .follow{
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile_view .index > .recipes{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px 30px 0px 10px ;
+}
+
+.glo > .index, .glo > .recipes{
+    width: 100%;
+    padding: 20px; 
+    box-sizing: border-box;
+}
+
+.index > .recipes > .recipe{
+    width: 320px;
+    margin-bottom: 10px;
+    border: 1px solid #30363d;
+    padding: 20px; 
+    border-radius: 10px;
+    background: rgba(0, 0, 0, .08);
+}
+
+.index > .recipes > .recipe > .first_line{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.recipes > .recipe a{
+    color: #1ce;
+    text-decoration: none;
+}
+
+.index > .recipes > .recipe > .first_line > span{
+    background: rgba(0, 0, 0, .2);   
+    width: 70px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.recipes > .recipe a:hover{
+    color: rgb(20, 156, 180);
+}
+.index > .recipes > .recipe > .date{
+    font-style: italic;
+}
+
+.recipes > .recipe.empty{
+    width: 100%;
+}
+
+.profile_view .recipes > .recipes{
+    padding: 10px 30px 0px 10px ;
+}
+
+.profile_view .recipes > .recipes > .recipe{
+    padding: 20px;
+    border-bottom: 1px solid #30363d;
+    width: 100%;
+}
+
+.recipes > .recipes > .recipe > .first_line{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.recipes > .recipes > .recipe > .first_line > span{
+    width: 165px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.recipes > .recipes > .recipe > .first_line > span > span{
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    margin-left: 10px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, .1);
+}
+.recipes > .recipes > .recipe > .preparation{
+    margin-bottom: 10px;
+}
+
+.recipes > .recipes > .recipe > .first_line > button{
+    padding: 5px 10px;
+    background: transparent;
+    font-size: 1rem;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+}
+
+.recipes > .recipes > .recipe > .first_line > button.yes{
+    color: yellow;
+}
+#editForm.hidden, #infosBox.hidden{
+    display: none;
+}
+#editForm{
+    padding: 10px;
+}
+#changeAvatarBtn.hidden{
+    display: none;
+}
+form > p {  
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+form > p > label{
+    width: 100%;
+    margin-bottom: 10px;
+}
+form > p > input{
+    width: 90%;
+    background: transparent;
+    border: 1px solid #30363d;
+    color: rgba(255, 255, 255, .7);
+    padding: 7.5px 10px;
+    border-radius: 7.5px;
+}
+
+form > p > textarea{
+    width: 90%;
+    background: transparent;
+    border: 1px solid #30363d;
+    color: rgba(255, 255, 255, .7);
+    padding: 7.5px 10px;
+    height: 90px;
+    border-radius: 7.5px;
+    resize: none;
+}
+
+form > .btns{
+    display: flex;
+    justify-content: space-between;
+}
+form label[for='id_avatar'], input[type='file']{
+    display: none;
+}
+.btns > button{
+    background: green;
+    color: #fff;
+    padding: 10px 12px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+input{
+    accent-color: red;
+}
+
+.btns > p{
+    background: red;
+    color: #fff;
+    padding: 10px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btns > button:hover{
+    background: rgba(0, 128, 0, 0.712);
+}
+
+.btns > p:hover{
+    background: rgba(255, 0, 0, 0.774);
+}
+
+p.check{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    position: relative;
+    --border: #D1DCDB;
+    --cursor: #89909E;
+    --check: #1771E6;
+    --check-cursor: #fff;
+}
+p.check > label{
+    display: grid;
+    grid-template-columns: 1fr 2em;
+    grid-template-areas: 'label checkbox';
+    gap: .7em;
+}
+p.check > label::before, p.check > label::after {
+    content: '';
+    grid-area: checkbox;
+    display: block;
+}
+p.check > label::before{
+    width: 100%;
+    height: 1em;
+    border-radius: 1em;
+    border: 1px solid var(--border);
+    transition: background-color .3s, border-color .3s;
+}
+p.check > label::after{
+    position: relative;
+    left: 2px;
+    top: 2px;
+    width: calc(1em - 2px);
+    height: calc(1em - 2px);
+    border-radius: 50px;
+    background: var(--cursor);
+    transition: background-color .3s, transform .3s;
+}
+p.check > input{
+    padding: 10px;
+    position: absolute;
+    opacity: 0;
+    z-index: 9;
+    width: 10px;
+}
+
+p.check > label.checked::before{
+    background: var(--check);
+    border-color: var(--check-cursor);
+}
+
+p.check > label.checked::after{
+    background: var(--check-cursor);
+    transform: translateX(1em);
+}
+
+/* Dark mode */
+
+.dark_mode{
+    background: #0D1117;
+    color: #fff;
+}
+
+.dark_mode .profile_view > .top > .links > .link{
+    color: #fff;
+}
+.dark_mode .profile_view > .top > .links > .link.actif{
+    color: #f78166;
+}
+
+.dark_mode .profile_view > .top > .links > .link.actif::after{
+    background: #f78166;
+}
+
+.dark_mode .profile_view > .top > .links > .link > .nber{
+    background: rgba(255, 255, 255, .1);
+}
+
+.dark_mode .profile_box .info > h3{
+    color: rgba(255, 255, 255, .6);
+}
+
+.dark_mode .profile_box .info > button{
+    background: rgba(255, 255, 255, .1);
+    color: #fff;
+}
+
+.dark_mode .profile_box .info > button:hover{
+    background: rgba(255, 255, 255, .3);
+}
+
+.dark_mode .profile_view > .glo > .profile_box{
+    background: transparent;
+}
+
+.dark_mode .index > .recipes > .recipe > .first_line > span{
+    background: rgba(255, 255, 255, .2);  
+}
+
+@media screen and (max-width: 792px) {
+    .profile_view > .glo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .profile_view > .glo > .profile_box > .img{
+        margin-top: 0;
+    }
+
+    .profile_view .index,
+    .profile_view .index .recipes{ 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 415px) {
+    
+    .profile_view > .glo > .profile_box > .img > img{
+        width: 75%;
+        margin-left: 12.5%;
+        height: auto;
+        border-radius: 50%;
+    }
+    .index > .recipes > .recipe{
+        width: 280px;
+    }
+    body{
+        overflow-x: hidden;
+    }
+}

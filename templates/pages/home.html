@@ -1,0 +1,99 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %} Kiche {% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+
+{% block content %}
+
+    {% include 'partials/_nav.html' %}
+    <div class="homeview" id="view">
+        <div class="left_part">
+            <div class="head">
+                <span class="name">{% translate 'your_recipe' %}</span>
+                <a href="{% url 'recipes:add' %}" class="add">
+                    <i class="fa fa-plus"></i>
+                    {% translate 'add' %}
+                </a>
+            </div>
+            <form action="">
+                <input type="text"  name="" id="" placeholder="{% translate 'f_r' %}">
+            </form>
+            <ul class="allRecettes">
+                {% for recipe in recettes %}
+                    <a href="{% url 'recipes:one' recipe.id %}" class="item">
+                        <img src="{% if recipe.picture %} {{ recipe.picture.url }} {% else %} {% static 'images/recettes/h.png' %} {% endif %}" alt="{{recipe.name}}">
+                        <span class="name">
+                            {{recipe.name}}
+                        </span>
+                    </a>
+                    {% empty %}
+                        <li class="item">
+                            <a class="name">
+                                Nothing to display.
+                            </a>
+                        </li>
+                {% endfor %}
+            </ul>
+            <a href="{% url 'recipes:all' %}" class="more">{% translate 'show_more' %}</a>
+
+            <hr>
+
+            <div class="footer">
+                <div class="logo">
+                    <i class="fa fa-pencil"></i>  
+                </div>
+                <span>
+                    &copy; Kiche {% now 'Y' %}
+                </span>
+            </div>
+        </div>
+        <div class="rigth_part">
+            <div class="helper">
+                <div class="feeds">
+                    <h1>
+                        {% translate 'home_helper_title' %}
+                    </h1>
+                    <p>
+                        {% translate 'home_helper_news' %}
+                    </p>
+                    <p>
+                        {% translate 'why_not_see' %}
+                        <a href="#">
+                            {% translate 'follow_user' %}
+                        </a> 
+                            {% translate 'or' %}
+                        <a href="#">
+                            {% translate 'p_r' %}
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="response_to_war">
+                <div class="logo">
+                    <i class="fa fa-pencil"></i>
+                    <div class="top"></div>
+                    <div class="bottom"></div>
+                </div>
+                <div class="content">
+                    <h1>
+                        {% translate 'response_to_war' %}
+                    </h1>
+                    <p>
+                        {% translate 'war_para' %}
+                    </p>
+                    <a href="#" class="more">
+                        {% translate 'read_more' %}
+                    </a>
+                </div>
+            </div>
+        </div>
+{% endblock %}
+
+{% block js %}
+
+{% endblock %}

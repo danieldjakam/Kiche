@@ -1,0 +1,25 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %} Infos {% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{% static 'css/notifications.css' %}">
+{% endblock %}
+
+
+{% block content %}
+
+    {% include 'partials/_nav.html' %}
+    <div class="listnotifications_view" id="view">
+        <div class="all">
+            {% translate 'ssjkhjkk' as s %}
+            <h1>Your notifications</h1>
+            {% include 'notifications/_add_friend.html' %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block js %}
+
+{% endblock %}

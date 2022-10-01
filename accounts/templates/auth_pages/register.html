@@ -1,0 +1,45 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %} Register | Cake {% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="global">
+        <div class="leftPart">
+            <img src="{% static 'images/2.png' %}" alt="">
+            <div class="info">
+                {% translate 'need' %}
+            </div>
+        </div>
+        <div class="rigthPart">
+            
+            <div class="top">
+                <a href="{% url 'landing' %}" class="logo">
+                    <i class="fa fa-pencil"></i>
+                </a>
+        
+            </div>
+            <div class="form">
+                
+                <form method="post">
+                    <h1>{% translate 'register' %}</h1>
+                    {% csrf_token %}
+                    {{form.as_p}}
+
+                    <button type="submit">{% translate 'register' %}</button>
+                </form>
+
+                <p class="question">
+                    {% translate 'al' %} <a href="{% url 'accounts:login' %}">{% translate 'login' %}</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,89 @@
+{% load i18n %}
+{% load static %}
+
+<div class="title">
+    <h1>
+        {% translate 'finish the creation of ' %}{{recipe.name}}
+    </h1>
+    <p>
+        {% translate 'you should finish the creation of the recipe.'%}
+    </p>
+</div>
+<form method="post" class="finish_form" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="left">
+        
+        <div class="part">
+            <div class="field name">
+                <label for="id_ingredients">
+                    {% translate 'ingredients' %} <span class="text-danger">*</span>
+                </label>
+                <textarea type="text" name="ingredients" class="required" value="{{fields.ingredients}}" required id="id_ingredients" placeholder="{% translate 'exple of ingredients list' %}"></textarea>
+                <p>
+                    <!-- {% translate 'indication for ingredients liste' %} -->
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet officia veniam incidunt!
+                </p>
+            </div>
+        </div>  
+        <div class="part">
+            <div class="field name">
+                <label for="id_preparation_step">
+                    {% translate 'preparation step' %} <span class="text-danger">*</span>
+                </label>
+                <textarea type="text" name="preparation_step" class="required" value="{{fields.preparation_step}}" required id="id_preparation_step" placeholder="{% translate 'exple of preparation step' %}"></textarea>
+                <p>
+                    <!-- {% translate 'indication for preparation step' %} -->
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Id voluptates tempore velit.
+                </p>
+            </div>
+        </div>  
+        <div class="part">
+            <div class="field name">
+                <label for="id_cuisson_step">
+                    {% translate 'cuisson step' %} <span class="p">({% translate 'optional' %})</span>
+                </label>
+                <textarea type="text" name="cuisson_step" class="required" value="{{fields.cuisson_step}}" id="id_cuisson_step" placeholder="{% translate 'exple of cuisson step' %}"></textarea>
+                <p>
+                    <!-- {% translate 'indication for cuisson step' %} -->
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio eum maxime commodi!
+                </p>
+            </div>
+        </div>  
+        <div class="part">
+            <p class="info">
+                {% if errors %}
+                    <ul class="errors">
+                        {% for error in errors %}
+                            <li>
+                                <i class="fa fa-none-o"></i> {{error}}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <i class="fa fa-info-circle"></i> {% translate 'your are creating a recipe in your account' %}
+                {% endif %}
+            </p>
+        </div>
+        <button class="add_recipe">
+            <span>
+                {% translate 'finish' %}
+            </span>
+        </button>
+    </div>
+    <div class="rigth">
+        <div class="field">
+            <label for="id_picture">{% translate 'recipe picture' %}</label>
+            <div class="img">
+                <img src="{% static 'images/recettes/rs.png' %}" alt="Image de {{recipe.name}}}" id="recipe_picture">
+                <label for="id_picture">
+                    <i class="fa fa-pencil"></i> {% translate 'edit for recipe' %}
+                </label>
+                <input type="file" name="picture" accept="image/*" id="id_picture">
+            </div>
+        </div>
+    </div>
+</form>
+
+{% block js %}
+    <script src="{% static 'js/add_recipe_two.js' %}"></script>
+{% endblock %}
