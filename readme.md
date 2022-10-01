@@ -10,6 +10,7 @@
 <p>
     Email: <a target='_blank' href="mailto:danidjakam@gmail.com">danidjakam@gmail.com</a>
 </p>
+
 <p>
     Instagram: <a target='_blank' href="https://www.instagram.com/daniel_djakam/">@daniel_djakam</a>
 </p>
