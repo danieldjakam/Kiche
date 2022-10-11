@@ -149,7 +149,9 @@ body{
     color: #1ce;
     text-decoration: none;
 }
-
+.recipe .bloack{
+    display: block;
+}
 .index > .recipes > .recipe > .first_line > span{
     background: rgba(0, 0, 0, .2);   
     width: 70px;
