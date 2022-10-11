@@ -74,7 +74,7 @@
                         {% for recipe in recipes %}
                             <div class="recipe">
                                 <div class="first_line">
-                                    <a href="#">
+                                    <a href="{% url 'recipes:one' recipe.id %}">
                                         {{recipe.name}}
                                     </a>
 
@@ -105,22 +105,29 @@
                     <div class="recipes">
                         {% for recipe in recipes %}
                             <div class="recipe">
-                                <div class="first_line">
-                                    <span>
-                                        <a href="#">
-                                            {{recipe.name}}
-                                        </a>    
+                                <div class="img">
+                                    <img src="{% if profile.picture %} 
+                                                {{ profile.avatar.url }} {% else %} {% static 'images/default_avatar.jpeg' %} {% endif %}" 
+                                                id="avatarProfile" alt="">
+                                </div>
+                                <div class="bloack">
+                                    <div class="first_line">
                                         <span>
-                                            {% if recipe.is_private %}
-                                                {% translate 'private' %}
-                                            {% else %}
-                                                {% translate 'public' %}
-                                            {% endif %}
+                                            <a href="{% url 'recipes:one' recipe.id %}">
+                                                {{recipe.name}}
+                                            </a>    
+                                            <span>
+                                                {% if recipe.is_private %}
+                                                    {% translate 'private' %}
+                                                {% else %}
+                                                    {% translate 'public' %}
+                                                {% endif %}
+                                            </span>
                                         </span>
-                                    </span>
-                                    <button class="star {% if recipe.is_private %} yes {% endif %}">
-                                        <i class="fa fa-star "></i>
-                                    </button>
+                                        <button class="star {% if recipe.is_private %} yes {% endif %}">
+                                            <i class="fa fa-star "></i>
+                                        </button>
+                                    </div>
                                 </div>
                                 <div class="preparation">
                                     {% lorem 12 w random %}

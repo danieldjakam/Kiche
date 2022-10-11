@@ -39,30 +39,36 @@ def settings(req):
 def profile(req):
     recipes = [
         {
+            "id": 1,
             "name": 'Fried rice', 
             "picture": "images/recettes/rs.png", 
             "is_private": True
         },
         {
+            "id": 1,
             "name": 'Hamburger', 
             "picture": "images/recettes/h.png", 
             "is_private": False
         },
         {
+            "id": 1,
             "name": 'Crescent', 
             "picture": "images/recettes/c.png", 
             "is_private": False},
         {
+            "id": 1,
             "name": 'Crescent', 
             "picture": "images/recettes/c.png", 
             "is_private": True
         },
         {
+            "id": 1,
             "name": 'Crescent', 
             "picture": "images/recettes/c.png", 
             "is_private": False
         },
     ]
+
 
     profil = Profile.objects.get(user=req.user)
     is_recipe_page = False
