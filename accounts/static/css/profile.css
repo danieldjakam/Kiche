@@ -179,6 +179,10 @@ body{
     border-bottom: 1px solid #30363d;
     width: 100%;
 }
+h1{
+    margin: 10px;
+    margin-bottom: 0;
+}
 
 .recipes > .recipes > .recipe > .first_line{
     display: flex;

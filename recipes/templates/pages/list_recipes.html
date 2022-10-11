@@ -2,20 +2,59 @@
 {% load static %}
 {% load i18n %}
 
-{% block title %} Infos {% endblock %}
+{% block title %} {{request.user.username }} | profile {% endblock %}
 {% block stylesheets %}
-    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
 {% endblock %}
 
 
 {% block content %}
-
     {% include 'partials/_nav.html' %}
-    <div class="recipes_view" id="view">
-        <h1>Your recipes</h1>
+    <div class="profile_view" id="view">
+        <h1>{% translate 'your_recipe' %}</h1>
+        <div class="glo">
+            <div class="recipes">
+                <div class="recipes">
+                    {% for recipe in recipes %}
+                        <div class="recipe">
+                            <div class="first_line">
+                                <span>
+                                    <a href="#">
+                                        {{recipe.name}}
+                                    </a>    
+                                    <span>
+                                        {% if recipe.is_private %}
+                                            {% translate 'private' %}
+                                        {% else %}
+                                            {% translate 'public' %}
+                                        {% endif %}
+                                    </span>
+                                </span>
+                                <button class="star {% if recipe.is_private %} yes {% endif %}">
+                                    <i class="fa fa-star "></i>
+                                </button>
+                            </div>
+                            <div class="preparation">
+                                {% lorem 12 w random %}
+                            </div>
+                            <em>
+                                {% translate 'updated' %} {%now 'd F Y'%}
+                            </em>
+                        </div>
+                    {% empty %}
+                        <div class="recipe empty">
+                            <h1>
+                                {% translate 'have_not_create_recipe' %}
+                            </h1>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
     </div>
 {% endblock %}
 
 {% block js %}
-
+    <script src="{% static 'js/profile.js' %}"></script>
 {% endblock %}
