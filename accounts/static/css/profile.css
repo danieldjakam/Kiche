@@ -165,7 +165,7 @@ body{
     color: rgb(20, 156, 180);
 }
 .index > .recipes > .recipe > .date{
-    font-style: italic;
+    font-style: italic; 
 }
 
 .recipes > .recipe.empty{
