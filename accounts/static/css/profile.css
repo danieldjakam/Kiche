@@ -83,7 +83,10 @@ body{
 .profile_view > .glo > .profile_box > .img > img{
     width: 300px;
     height: 300px;
+    background-size: cover;
+    background-position: center;
     border-radius: 50%;
+    background-image: center;
 }
 
 .profile_view > .glo{
@@ -323,10 +326,118 @@ p.check > label::before, p.check > label::after {
 p.check > label::before{
     width: 100%;
     height: 1em;
-    border-radius: 1em;
+us: 1em;
     border: 1px solid var(--border);
     transition: background-color .3s, border-color .3s;
 }
+p.check > label::after{
+    position: relative;
+    left: 2px;
+    top: 2px;
+    width: calc(1em - 2px);
+    height: calc(1em - 2px);
+    border-radius: 50px;
+    background: var(--cursor);
+    transition: background-color .3s, transform .3s;
+}
+p.check > input{
+    padding: 10px;
+    position: absolute;
+    opacity: 0;
+    z-index: 9;
+    width: 10px;
+}
+
+p.check > label.checked::before{
+    background: var(--check);
+    border-color: var(--check-cursor);
+}
+
+p.check > label.checked::after{
+    background: var(--check-cursor);
+    transform: translateX(1em);
+}
+
+/* Dark mode */
+
+.dark_mode{
+    background: #0D1117;
+    color: #fff;
+}
+
+.dark_mode .profile_view > .top > .links > .link{
+    color: #fff;
+}
+.dark_mode .profile_view > .top > .links > .link.actif{
+    color: #f78166;
+}
+
+.dark_mode .profile_view > .top > .links > .link.actif::after{
+    background: #f78166;
+}
+
+.dark_mode .profile_view > .top > .links > .link > .nber{
+    background: rgba(255, 255, 255, .1);
+}
+
+.dark_mode .profile_box .info > h3{
+    color: rgba(255, 255, 255, .6);
+}
+
+.dark_mode .profile_box .info > button{
+    background: rgba(255, 255, 255, .1);
+    color: #fff;
+}
+
+.dark_mode .profile_box .info > button:hover{
+    background: rgba(255, 255, 255, .3);
+}
+
+.dark_mode .profile_view > .glo > .profile_box{
+    background: transparent;
+}
+
+.dark_mode .index > .recipes > .recipe > .first_line > span{
+    background: rgba(255, 255, 255, .2);  
+}
+
+@media screen and (max-width: 792px) {
+    .profile_view > .glo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .profile_view > .glo > .profile_box > .img{
+        margin-top: 0;
+    }
+
+    .profile_view .index,
+    .profile_view .index .recipes{ 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 415px) {
+    
+    .profile_view > .glo > .profile_box > .img > img{
+        width: 75%;
+        margin-left: 12.5%;
+        height: auto;
+        border-radius: 50%;
+    }
+    .index > .recipes > .recipe{
+        width: 280px;
+    }
+    body{
+        overflow-x: hidden;
+    }
+}
+/* us: 1em;
+    border: 1px solid var(--border);
+    transition: background-color .3s, border-color .3s; */
+/* } */
 p.check > label::after{
     position: relative;
     left: 2px;

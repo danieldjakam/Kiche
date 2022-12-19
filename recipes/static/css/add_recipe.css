@@ -183,8 +183,9 @@ label > .p{
 
 .finish_form > .rigth > .field > .img > img{
     width: 100%;
-    height: 200px;
+    height: 2000px;
     border-radius: 50%;
+    background-size: cover;
 }
 
 input[type="file"]{
